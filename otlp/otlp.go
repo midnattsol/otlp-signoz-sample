@@ -75,6 +75,10 @@ func (m *Metrics) UpdateCartItems(delta int64) {
 	}
 }
 
+func (m *Metrics) RegisterLatency(ctx context.Context, duration float64) {
+	m.LatencyHist.Record(ctx, duration)
+}
+
 func (m *Metrics) RegisterError(ctx context.Context, statusCode int) {
 	m.ErrorCounter.Add(ctx, 1, metric.WithAttributes(semconv.HTTPStatusCodeKey.Int(statusCode)))
 }

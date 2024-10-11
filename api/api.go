@@ -24,7 +24,7 @@ func ProcessHandler(w http.ResponseWriter, r *http.Request, metrics *otlp.Metric
 	processRequest()
 
 	duration := time.Since(startTime).Seconds()
-	metrics.LatencyHist.Record(ctx, duration)
+	metrics.RegisterLatency(ctx, duration)
 
 	w.WriteHeader(statusCode)
 	if statusCode == http.StatusOK {
