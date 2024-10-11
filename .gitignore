@@ -1,0 +1,5 @@
+**/ca-cert.pem
+**/go.mod
+**/go.sum
+**/bin
+**/main
