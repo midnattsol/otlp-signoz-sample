@@ -41,8 +41,8 @@ func RemoveFromCartHandler(w http.ResponseWriter, r *http.Request, metrics *otlp
 	startTime := time.Now()
 	statusCode := http.StatusOK
 
-	// Simulate a 10% chance of an error when removing from cart
-	if rand.Float64() < 0.1 {
+	// Simulate a 30% chance of an error when removing from cart
+	if rand.Float64() < 0.3 {
 		statusCode = http.StatusInternalServerError
 		metrics.RegisterError(ctx, statusCode)
 	} else {
@@ -62,5 +62,5 @@ func RemoveFromCartHandler(w http.ResponseWriter, r *http.Request, metrics *otlp
 
 // processRequest simulates a processing delay
 func processRequest() {
-	time.Sleep(time.Duration(rand.Intn(100)) * time.Millisecond)
+	time.Sleep(time.Duration(rand.Intn(1000)) * time.Millisecond)
 }
