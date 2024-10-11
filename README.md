@@ -5,7 +5,7 @@ To achieve this, three endpoints have been created, introducing random latencies
 
 # Prerequisites
 ## Certificate
-Since we will be working with (SigNoz Cloud)[https://signoz.io/], we need to download the certificate corresponding to our region, in this case, Europe.
+Since we will be working with [SigNoz Cloud](https://signoz.io/), we need to download the certificate corresponding to our region, in this case, Europe.
 ```
 openssl s_client -showcerts -connect ingest.eu.signoz.cloud:443 </dev/null 2>/dev/null | openssl x509 -outform PEM > ca-cert.pem
 ``` 
