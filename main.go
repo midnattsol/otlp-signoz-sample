@@ -27,10 +27,6 @@ func main() {
 	meter := otel.Meter("POC")
 	metrics := otlp.NewMetrics(meter)
 
-	// Define HTTP server endpoints using the handlers from the API package and pass the metrics instance
-	http.HandleFunc("/process", func(w http.ResponseWriter, r *http.Request) {
-		api.ProcessHandler(w, r, metrics)
-	})
 	http.HandleFunc("/add-to-cart", func(w http.ResponseWriter, r *http.Request) {
 		api.AddToCartHandler(w, r, metrics)
 	})

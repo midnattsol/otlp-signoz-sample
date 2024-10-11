@@ -33,13 +33,46 @@ export CA_CERT_PATH=ca_cert.pem
 
 # Test
 Now you can test the application using the following endpoints:
-- `/process`
 - `/add-to-cart`
 - `/remove-from-cart`
 ```
-> curl localhost:8080/process
-Request processed successfully
-> curl localhost:8080/process
-Error processing the request
+❯ curl localhost:8080/add-to-cart
+Item added to cart. Total items: 1                                                                                                                                                            
+
+❯ curl localhost:8080/add-to-cart
+Item added to cart. Total items: 2                                                                                                                                                      
+
+❯ curl localhost:8080/add-to-cart
+Item added to cart. Total items: 3
+
+❯ curl localhost:8080/add-to-cart
+Item added to cart. Total items: 4
+
+❯ curl localhost:8080/add-to-cart
+Error adding item to cart
+
+❯ curl localhost:8080/add-to-cart
+Item added to cart. Total items: 5
+
+❯ curl localhost:8080/add-to-cart
+Error adding item to cart
+
+❯ curl localhost:8080/add-to-cart
+Error adding item to cart
+
+❯ curl localhost:8080/add-to-cart
+Item added to cart. Total items: 6
+
+❯ curl localhost:8080/add-to-cart
+Error adding item to cart
+
+❯ curl localhost:8080/add-to-cart
+Item added to cart. Total items: 7
+
+❯ curl localhost:8080/add-to-cart
+Item added to cart. Total items: 8
+
+❯ curl localhost:8080/add-to-cart
+Error adding item to cart
 
 ```
