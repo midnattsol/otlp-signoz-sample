@@ -1,7 +1,7 @@
 # Summary
 This project aims to provide a basic example of how to create an application that monitors certain elements using OpenTelemetry, storing those metrics in **SigNoz**, an open-source software for observability and performance monitoring.
 
-To achieve this, three endpoints have been created, introducing random latencies through sleep and requests that fail 30% of the time to visualize the data in **SigNoz**.
+To achieve this, two endpoints have been created, introducing random latencies through sleep and requests that fail 30% of the time to visualize the data in **SigNoz**.
 
 # Prerequisites
 ## Certificate
