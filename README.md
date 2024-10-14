@@ -20,13 +20,13 @@ To obtain this, navigate to *Settings -> Ingestion Key*.
 
 ## Environment Variables
 Before running the application, ensure you have set the following environment variables:
-- `OTEL_EXPORTER_OTLP_ENDPOINT=ingest.eu.signoz.cloud`
+- `OTEL_EXPORTER_OTLP_ENDPOINT=<INGEST_ENDPOINT>`
 - `SIGNOZ_ACCESS_TOKEN=<YOUR_INGESTION_KEY>`
 - `CA_CERT_PATH=<PATH_TO_CERT>`
 
 ### Example
 ```
-export OTEL_EXPORTER_OTLP_ENDPOINT=ingest.eu.signoz.cloud
+export OTEL_EXPORTER_OTLP_ENDPOINT=ingest.eu.signoz.cloud:443
 export SIGNOZ_ACCESS_TOKEN=<YOUR_INGESTION_KEY>
 export CA_CERT_PATH=ca_cert.pem
 ```
